@@ -1,0 +1,141 @@
+.banner-container{
+    height: 90vh;
+    background-image: url("../../assets/img/MPGI-map.jpeg");
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    text-align: center;
+    position: relative;
+    row-gap: 10em;
+}
+
+.banner-overlay{
+    background-color: rgb(0 0 0 / 90%);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.banner-content{
+    /* background-color: aqua; */
+    z-index: 2;
+}
+
+
+.arrow-down{
+    background-color: green;
+    border-radius: 100%;
+    padding: 1.3em;
+    cursor: pointer;
+    /* box-shadow: 1px 1px 3px black; */
+    /* border: 1px solid black; */
+    z-index: 2;
+    position: relative;
+    top: 2rem;
+}
+
+                                  /*      Styling Contact section       */                      
+
+.contact{
+    margin-top: 4rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+form.details{
+    width: 50%;
+    /* background-color: rgb(0 0 0 / 10%); */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    row-gap: 1.5rem;
+    padding-right: 1em;
+    padding-left: 1em;
+}
+
+form.details .input-box{
+    width: calc(100% / 3 - 20px);
+}
+
+form.details .input-box input{
+    width: 90%;
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid #cbd6e2;
+    background-color: #f5f8fa;
+}
+form.details .input-box input:focus{
+    outline: 1px solid lightblue;
+}
+
+
+.input-message{
+    /* flex-grow: 1; */
+    width: 100%;
+    
+}
+
+textarea{
+    width: 100%;
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid #cbd6e2;
+    background-color: #f5f8fa;
+}
+
+textarea:focus{
+    outline: 1px solid lightblue;
+}
+
+/* .details input{
+    border-radius: 5%;
+    
+} */
+
+.details input[type=submit]{
+    margin: 1rem auto;
+    padding: 10px 20px;
+    background-color: #70c84a;
+    border: 1px solid #70c84a;
+    color: white;
+}
+
+@media (max-width:480px){
+    .banner-container{
+        height: 80vh;
+        row-gap: 5rem;
+    }
+    .banner-content{
+
+    }
+
+    .banner-container h1{
+        font-size: 2.5rem;
+    }
+    .banner-container p{
+        font-size: 1.2rem;
+        padding:2rem;
+    }
+
+    .contact{
+        justify-content: flex-start;
+        min-height: 85vh;
+    }
+
+    form.details{
+        width: 100%;
+    }
+    form.details .input-box input{
+        width: 100%;
+    }
+
+    form.details .input-box{
+        width: 100%;
+    }
+}

@@ -1,0 +1,11 @@
+.team-page{
+    min-height: 100vh;
+    max-width: 100%;
+    padding: 3rem;
+}
+
+@media (max-width:480px) {
+    .team-page{
+        padding: 4rem 1rem;
+    }
+}
