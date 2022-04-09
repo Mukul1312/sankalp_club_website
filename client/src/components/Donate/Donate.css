@@ -1,0 +1,90 @@
+.page{
+    height: 100vh;
+    background-color: rgb(50 50 100 / 0%);
+}
+
+.donate-container{
+    margin: 10% auto;
+    padding-top:5%;
+    background-color: rgb(0 0 0 / 10%);
+    height: 85%;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: flex-start;
+    row-gap: 1.2rem;
+    position: relative;
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%); */
+}
+
+.input-box{
+    padding-bottom: 1.5rem;
+}
+
+.input-box input,select{
+    height: 2rem;
+    width: 20rem;
+    background-color: white;
+    border: 1px solid green;
+    padding: 3px 5px;
+}
+
+.input-box input[placeholder="Name"]{
+    width: 15rem;
+    position: relative;
+    left: 6%;
+}
+
+.input-box input:focus{
+    outline: 3px solid lightblue;
+}
+
+.gender{
+    display: inline;
+}
+
+.gender select{
+    width: unset;
+}
+
+
+.amount-container{
+    /* position: absolute;
+    top: 80%;
+    left: 14%; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.amount-container{
+    width: 71%;
+    height: 15%;
+}
+
+.amount-container input{
+    height: 3rem;
+    width: 9rem;
+}
+
+.amount-container input[id="custom-amount"]{
+    display: none;
+}
+
+.amount-container .custom-amount{
+    display: flex;
+    width: 9rem;
+    height: 7rem;
+    flex-wrap: wrap;    
+}
+
+.donate-container .submit-details button{
+    height: 3rem;
+    width: 9rem;
+    position: absolute;
+    bottom: 3%;
+    right: 2%;
+}

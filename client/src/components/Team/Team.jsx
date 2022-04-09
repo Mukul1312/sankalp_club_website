@@ -25,7 +25,7 @@ export default function Team() {
                 <div className="col"><Card memberName={"saksham sahu"} memberPost={"Head"} /></div>
                 <div className="col"><Card memberName={"shreya trivedi"} memberPost={"Associate Head"} /></div>
                 <div className="col"><Card memberName={"Mukul dubey"} memberPost={"Web development Head"} /></div>
-                {/* <div className="col"><Card memberName={"Jatin Rastogi"}/></div>
+                <div className="col"><Card memberName={"Jatin Rastogi"}/></div>
                 <div className="col"><Card memberName={"Vedansh Singh "}/></div>
                 <div className="col"><Card memberName={"Shobhit Vishwakarma"}/></div>
                 <div className="col"><Card memberName={"kalpna shukla"}/></div>
@@ -41,7 +41,7 @@ export default function Team() {
                 <div className="col"><Card memberName={"Aanshi Mishra"}/></div>
                 <div className="col"><Card memberName={"Akancha singh kanoujia"}/></div>
                 <div className="col"><Card memberName={"arya gupta"}/></div>
-                <div className="col"><Card memberName={"Ritik Saxena"}/></div> */}
+                <div className="col"><Card memberName={"Ritik Saxena"}/></div>
             </div>
         </div>
     )

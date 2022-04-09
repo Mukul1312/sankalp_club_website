@@ -2,8 +2,13 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import './Navbar.css'
+import { animateScroll as scroll } from 'react-scroll'
 
 export default function Navbar() {
+    function donate(){
+        
+    }
+
     return (
         <div className="bg-dark">
             <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
@@ -26,10 +31,12 @@ export default function Navbar() {
                                 <Link className="custom-nav-link" to="/contact" >Contact</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="custom-nav-link" to="/signin" >Login</Link>
+                                <Link className="custom-nav-link" to="/login" >Login</Link>
                             </li>
                             <li>
-                                <button className="btn btn-outline-light btn-sm" type="submit">DONATE</button>
+                                <button className=" donate-button btn btn-outline-light btn-sm" type="submit" >
+                                    <Link className="donate-link" to="/donate">DONATE</Link>
+                                </button>
                             </li>
                         </ul>
                     </div>

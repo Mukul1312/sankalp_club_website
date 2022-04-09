@@ -1,6 +1,7 @@
 import React from 'react'
 import { BsChevronDown } from 'react-icons/bs'
 import "./Contact.css"
+import {Link} from "react-scroll"
 
 export default function Contact() {
     return (
@@ -11,11 +12,13 @@ export default function Contact() {
                     <h1 className="banner-title">Let’s do something awesome together.</h1>
                     <p className="banner-paragraph">Drop us a line, or give us a heads up if you’re interested in visiting us.</p>
                 </div>
-                <div className="arrow-down" onClick={() => alert("Hi")} >
-                    <BsChevronDown  
-                        size="2em"
-                        color="black"
-                    />
+                <div className="arrow-down" >
+                    <Link to="contact-details">
+                        <BsChevronDown  
+                            size="2em"
+                            color="black"
+                        />
+                    </Link>
                 </div>
             </div>
             <div className="contact" id="contact-details">
@@ -37,7 +40,7 @@ export default function Contact() {
                         <label htmlFor="message">Message</label>
                         <textarea name="message" id="message" rows="4"></textarea>
                     </div>
-                    <input class="" type="submit" value="Submit" />
+                    <input className="" type="submit" value="Submit" />
                 </form>
                 <p>MPEC Office | Kothi Mandhana kalyanpur</p>
             </div>

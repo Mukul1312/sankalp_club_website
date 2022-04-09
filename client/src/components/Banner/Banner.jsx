@@ -10,13 +10,13 @@ export default function Banner() {
         <div className="position-relative" >
             <div className="cover-overlay"></div>
             <div className="cover-container">
-                    <div className="cover-title">
-                        <h1 className="display-4 fw-bold">To make this world</h1>
-                        <h1 className="display-4 fw-bold">a better place to live.</h1>
-                    </div>
-                    <button className="slide-button btn" >
-                            <BsChevronCompactDown size={"5em"} color={"#fff"} />
-                    </button>
+                <div className="cover-title">
+                    <h1 className="display-4 fw-bold">To make this world</h1>
+                    <h1 className="display-4 fw-bold">a better place to live.</h1>
+                </div>
+                <Link to="Gallery">
+                    <BsChevronCompactDown className="slide-button" size={"5em"} color={"#fff"} />
+                </Link>
             </div>
         </div>
     )
