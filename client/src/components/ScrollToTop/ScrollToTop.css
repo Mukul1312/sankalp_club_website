@@ -1,0 +1,23 @@
+.top-to-btm{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    border-radius: 15%;
+    height: 2rem;
+    width: 1.5rem;
+    /* background-color: #00684d; */
+    bottom: 30px;
+    right: 40px;
+}
+
+.icon-style{
+    color: white;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+
+.icon-style:hover{
+    color: black;
+}

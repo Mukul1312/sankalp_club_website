@@ -38,6 +38,15 @@
   @media (max-width:480px) {
     .navbar-nav li{
       text-align: center;
-      margin: 0.15rem 10px;
+      margin: 0.23rem 11px;
+    }
+
+    .custom-navbar-brand{
+      font-size: 1.5rem;
+      margin-left: 1rem;
+    }
+
+    .custom-nav-link::after{
+      background-color: transparent;
     }
   }

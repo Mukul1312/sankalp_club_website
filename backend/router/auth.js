@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcryptjs');
+// const cors = require('cors')
 
 require('../db/conn');
 const User = require("../model/userSchema");
@@ -8,6 +9,8 @@ const User = require("../model/userSchema");
 router.get('/', (req,res) => {
     res.send("Hello World from auth")
 });
+
+
 
 //Using Async await
 
@@ -37,9 +40,18 @@ router.post('/register', async (req,res) => {
         console.log(err);
     }
 
-    // console.log(name);
-    // console.log(email);
+    console.log(name);
+    console.log(email);
 })
+
+// const corsOptions = {
+//     origin: "http://localhost:3000/signin",
+//     methods: ["POST"],
+//     allowedHeaders: ['Content-Type'],
+//     Credential: true,
+//     preflightContinue: false,
+//     optionsSucessStatus: 200
+// }
 
 router.post('/signin', async (req,res) => {
 
@@ -60,8 +72,8 @@ router.post('/signin', async (req,res) => {
             const isMatch = await bcrypt.compare(password, userExist.password);
 
             if(isMatch) {
-                res.status(200).json({message: "user signin successfully"})
-                res.send('/secret')
+                res.status(200).json({message: "user signin successfully"});
+
                 console.log("user signin successfully");
             } else{
                 console.log("user error pass");

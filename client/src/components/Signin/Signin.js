@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import "./Signin.css"
 
+
 export default function Signin() {
 
     const [user, setUser] = useState({
@@ -18,19 +19,21 @@ export default function Signin() {
     const loginData = async (Event) => {
         Event.preventDefault();
 
-        const {email, password} = user;
+        const {email, password} = user;      
 
-        const response = await fetch('/signin', {
+        const response = await fetch(`https://sankalp-club.herokuapp.com/signin`, {
             method: "POST",
             headers: {
-                "Content-Type": "application/json"
+                "Origin": "https://sankalp-mpgi.netlify.app/",
+                "Content-Type": "application/json",
             },
+
             body: JSON.stringify({
                 email, password
             })
         });
 
-        console.log(response.status);
+        console.log(response);
 
         if(response.status === 200) {
             window.alert("user signin successfully");
@@ -63,7 +66,7 @@ export default function Signin() {
                         </div>
                         <div className="checkbox">
                             <input type="checkbox" id="checkbox" />
-                            <label for="checkbox">Remember me</label>
+                            <label htmlFor="checkbox">Remember me</label>
                         </div>
                         <div className="submit-btn">
                             <button onClick={loginData} >LOGIN</button>

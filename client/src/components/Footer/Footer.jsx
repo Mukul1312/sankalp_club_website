@@ -14,16 +14,16 @@ export default function Footer() {
                 <div className="footer-social">
                     <ul>
                         <li className="footer_social_facebook">
-                            <a href="#"><BsFacebook color="white" /></a>
+                            <a href="https://github.com/Mukul1312"><BsFacebook color="white" /></a>
                         </li>
                         <li className="footer_social_instagram">
-                            <a href="#"><BsInstagram color="white" /></a>
+                            <a href="https://github.com/Mukul1312"><BsInstagram color="white" /></a>
                         </li>
                         <li className="footer_social_twitter">
-                            <a href="#"><BsTwitter color="white" /></a>
+                            <a href="https://github.com/Mukul1312"><BsTwitter color="white" /></a>
                         </li>
                         <li className="footer_social_linkedin">
-                            <a href="#"><BsLinkedin color="white" /></a>
+                            <a href="https://github.com/Mukul1312"><BsLinkedin color="white" /></a>
                         </li>
                     </ul>
                 </div>

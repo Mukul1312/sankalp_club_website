@@ -19,9 +19,10 @@ export default function Signup() {
 
         const {name, email, password} = user;
 
-        const response = await fetch("/register", {
+        const response = await fetch("https://sankalp-club.herokuapp.com/register", {
             method: "POST",
             headers: {
+                "Origin": "https://sankalp-mpgi.netlify.app/",
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
@@ -67,7 +68,7 @@ export default function Signup() {
                                 <label>Password</label>
                             </div>
                             <div className="submit-btn">
-                                <button onClick={postData} >register</button>
+                                <button onClick={postData} >Register</button>
                             </div>
                         </div>
                     </form>

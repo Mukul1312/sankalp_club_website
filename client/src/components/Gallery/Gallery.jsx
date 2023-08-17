@@ -5,14 +5,11 @@ import chairmanImgPortrait from "../../assets/img/chairman-gifting-on-diwali.jpe
 import chairmanImg from "../../assets/img/chairman-giving-speech-portrait.jpeg"
 import directorSpeechImgPortrait from "../../assets/img/Director-giving-speech-portrait.jpeg"
 import sanlalpTeam from "../../assets/img/sankalp-team.jpeg"
-import img5449 from "../../assets/img/WhatsApp Image 2021-11-07 at 8.54.49 PM.jpeg"
 import img5503 from "../../assets/img/WhatsApp Image 2021-11-07 at 8.55.03 PM.jpeg"
 import img5515 from "../../assets/img/WhatsApp Image 2021-11-07 at 8.55.15 PM.jpeg"
-import img5534 from "../../assets/img/WhatsApp Image 2021-11-07 at 8.55.34 PM.jpeg"
 import img5544 from "../../assets/img/WhatsApp Image 2021-11-07 at 8.55.44 PM.jpeg"
 import img5659 from "../../assets/img/WhatsApp Image 2021-11-07 at 8.56.59 PM.jpeg"
 import img5309 from "../../assets/img/WhatsApp Image 2021-11-07 at 8.53.09 PM.jpeg"
-import Photo from '../Photo/Photo'
 
 
 export default function Gallery() {
@@ -106,17 +103,3 @@ export default function Gallery() {
         </div>
     )
 }
-
-
-
-
-
-            {/* <div className="img-gallery container-fluid">
-                <Photo className="event-photo" style={{width:"100px", height:"100px"}} eventPhoto={anchorImg} />
-                <Photo className="event-photo" style={{width:"100px", height:"100px"}} eventPhoto={anchorImg} />
-                <Photo className="event-photo" style={{width:"100px", height:"100px"}} eventPhoto={anchorImg} />
-                <Photo className="event-photo" style={{width:"100px", height:"100px"}} eventPhoto={anchorImg} />
-                <Photo className="event-photo" style={{width:"100px", height:"100px"}} eventPhoto={anchorImg} />
-                <Photo className="event-photo" style={{width:"100px", height:"100px"}} eventPhoto={anchorImg} />
-                <Photo className="event-photo" style={{width:"100px", height:"100px"}} eventPhoto={anchorImg} />
-            </div> */}

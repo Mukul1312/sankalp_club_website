@@ -1,20 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { useState } from 'react'
 import './Navbar.css'
-import { animateScroll as scroll } from 'react-scroll'
 
 export default function Navbar() {
-    function donate(){
-        
-    }
 
     return (
         <div className="bg-dark">
             <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
                 <div className="container">
                     <div className="">
-                        <Link className="navbar-brand" to="/">Sankalp</Link>
+                        <Link className="navbar-brand custom-navbar-brand" to="/">Sankalp</Link>
                     </div>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
@@ -34,7 +29,7 @@ export default function Navbar() {
                                 <Link className="custom-nav-link" to="/login" >Login</Link>
                             </li>
                             <li>
-                                <button className=" donate-button btn btn-outline-light btn-sm" type="submit" >
+                                <button className="donate-button btn btn-outline-light btn-sm" type="submit" >
                                     <Link className="donate-link" to="/donate">DONATE</Link>
                                 </button>
                             </li>

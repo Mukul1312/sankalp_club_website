@@ -8,4 +8,8 @@
     .team-page{
         padding: 4rem 1rem;
     }
+
+    .width100{
+        width: 100%;
+    }
 }

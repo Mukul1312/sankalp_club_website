@@ -1,6 +1,7 @@
 const dotenv = require('dotenv');
 const express = require('express');
-const Razorpay = require('razorpay')
+const cors = require('cors');
+const Razorpay = require('razorpay');
 
 dotenv.config({ path:'./config.env' });
 require("./db/conn");
@@ -20,9 +21,36 @@ const PORT = process.env.PORT;
 
 app.use(express.json());
 
-var razorpay = new Razorpay({ 
-    key_id: 'rzp_test_ugHXcsia9p3Yto',
-    key_secret: 'SCQGxZWeGQnwyKbTlf9dohsH'
+
+app.use(function (req, res, next) {
+
+    // Website you wish to allow to connect
+    res.setHeader('Access-Control-Allow-Origin', 'https://sankalp-mpgi.netlify.app');
+
+    // Request methods you wish to allow
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+
+    // Request headers you wish to allow
+    res.setHeader("Access-Control-Allow-Headers", "Access-Control-Allow-Headers, Origin, X-Requested-With, Content-Type, Accept, Authorization");
+
+
+    // Set to true if you need the website to include cookies in the requests sent
+    // to the API (e.g. in case you use sessions)
+    res.setHeader('Access-Control-Allow-Credentials', true);
+
+    // Pass to next layer of middleware
+    next();
+});
+
+
+var razorpayTEST = new Razorpay({ 
+    key_id: process.env.TEST_KEY_ID,
+    key_secret: process.env.TEST_KEY_SECRET
+})
+
+var razorpayLIVE = new Razorpay({ 
+    key_id: process.env.LIVE_KEY_ID,
+    key_secret: process.env.LIVE_KEY_SECRET
 })
 
 
@@ -33,22 +61,6 @@ app.get('/', (req,res) => {
     res.send("Hello World from app")
 });
 
-app.get('/home', (req,res) => {
-    res.send("Hello Home")
-});
-
-app.get('/team', (req,res) => {
-    res.send("Hello team")
-});
-
-app.get('/contact', (req,res) => {
-    res.send("Hello contact")
-});
-
-app.get('/login', (req,res) => {
-    res.send("Hello login")
-});
-
 app.get('/secret', (req,res) => {
     res.send("it's an secret page");
 })
@@ -57,6 +69,9 @@ let order;
 
 app.post('/orders', async (req,res) => {
 
+    const __DEV__ = req.headers.referer.includes("localhost")
+    console.log(`Currently development is ${__DEV__}`);
+    
     const {amount, currency} = req.body
     // console.log(amount,currency);
     console.log("Trying to create an order")
@@ -67,7 +82,7 @@ app.post('/orders', async (req,res) => {
         receipt: "receipt#1"
     };
     try {
-        const response = await razorpay.orders.create(options)
+        const response = await (__DEV__ ? razorpayTEST : razorpayLIVE).orders.create(options)
         console.log(response)
 
         order = response
@@ -86,7 +101,7 @@ app.post('/orders', async (req,res) => {
 
 app.post('/verification', (req,res) => {
 
-    const SECRET = '741852963'
+    const SECRET = process.env.SHA_SECRET
 
     console.log(req.body)
     //validation
